@@ -43,9 +43,6 @@
 [submodule "vimfiles/bundle/gundo.vim"]
 	path = vimfiles/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "vimfiles/bundle/command-t"]
-	path = vimfiles/bundle/command-t
-	url = https://github.com/wincent/command-t.git
 [submodule "vimfiles/bundle/sessionman.vim"]
 	path = vimfiles/bundle/sessionman.vim
 	url = https://github.com/vim-scripts/sessionman.vim.git
