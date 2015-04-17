@@ -147,7 +147,6 @@ map <C-SPACE> o<ESC>
 "map <F5> :w\|!python %<CR>
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
-let g:pep8_map='<leader>8'
 map <leader>n :NERDTreeToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
