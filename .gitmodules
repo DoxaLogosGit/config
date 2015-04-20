@@ -46,3 +46,9 @@
 [submodule "vimfiles/bundle/sessionman.vim"]
 	path = vimfiles/bundle/sessionman.vim
 	url = https://github.com/vim-scripts/sessionman.vim.git
+[submodule "vimfiles/bundle/FeralToggleCommentify.vim"]
+	path = vimfiles/bundle/FeralToggleCommentify.vim
+	url = https://github.com/vim-scripts/FeralToggleCommentify.vim.git
+[submodule "vimfiles/bundle/a.vim"]
+	path = vimfiles/bundle/a.vim
+	url = https://github.com/vim-scripts/a.vim.git
