@@ -1,8 +1,9 @@
 " Vim color file
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last Change:	2006 Apr 14
+" Maintainer:	Jay Atkinson
+" Last Change:	2015 Apr 28
+"  Modified by Jay Atkinson
 
-" This color scheme uses a dark grey background.
+" This color scheme uses a black background.
 
 " First remove all existing highlighting.
 set background=dark
@@ -12,6 +13,9 @@ if exists("syntax_on")
 endif
 
 let colors_name = "jaydark"
+
+" syn match Braces display '[{}()\[\]]'
+" syn match mySymbols display '[\,.+=:-]'
 
 hi Normal ctermbg=Black ctermfg=White guifg=White guibg=Black
 
@@ -52,6 +56,8 @@ hi Repeat ctermfg=Cyan guifg=DarkCyan
 hi Conditional ctermfg=Cyan guifg=DarkCyan
 hi Operator ctermfg=Cyan guifg=DarkCyan
 
+hi Braces term=bold gui=bold ctermfg=Green guifg=green1
+hi SpecialSymbols term=bold gui=bold ctermfg=Green guifg=green1
 " Groups for syntax highlighting
 hi Constant ctermfg=Cyan guifg=#ff80ff 
 hi Special term=bold ctermfg=LightGreen guifg=Orange guibg=grey5
