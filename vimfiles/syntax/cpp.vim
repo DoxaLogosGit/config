@@ -43,7 +43,7 @@ endif
 
 " The minimum and maximum operators in GNU C++
 syn match cppMinMax "[<>]?"
-syn match cppBraces display '[{}()\[\]]'
+syn match cppBraces display '[{}()\[\]<>]'
 syn match cppSymbols display '[,.+=:-;*]'
 
 
