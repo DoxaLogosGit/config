@@ -254,7 +254,7 @@ endif
 syn sync match pythonSync grouphere NONE "^\s*\%(def\|class\)\s\+\h\w*\s*("
 
 syn match pythonBraces display '[{}()\[\]]'
-syn match pythonSymbols display '[\,.+=:-]'
+syn match pythonSymbols display '[\,.+=:-;*/]'
 
 if version >= 508 || !exists("did_python_syn_inits")
   if version <= 508
@@ -295,7 +295,7 @@ if version >= 508 || !exists("did_python_syn_inits")
     HiLink pythonDoctestValue	Define
   endif
   HiLink pythonBraces           Braces
-  HiLink pythonSymbols          mySymbols
+  HiLink pythonSymbols          SpecialSymbols
 
   delcommand HiLink
 endif
