@@ -35,7 +35,7 @@ hi Directory term=bold ctermfg=LightCyan guifg=Cyan
 hi LineNr term=underline ctermfg=Yellow guifg=Yellow
 hi MoreMsg term=bold ctermfg=LightGreen gui=bold guifg=SeaGreen
 hi NonText term=bold ctermfg=LightBlue gui=bold guifg=LightBlue guibg=grey30
-hi Question ctermfg=LightGreen guifg=Green
+hi Question ctermfg=LightGreen guifg=Cyan
 hi Search term=reverse ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 hi SpecialKey term=bold ctermfg=LightBlue guifg=Cyan
 hi Title term=bold ctermfg=LightMagenta gui=bold guifg=Magenta
@@ -62,8 +62,10 @@ hi SpecialSymbols term=bold gui=bold ctermfg=Green guifg=green1
 hi Constant ctermfg=Cyan guifg=#ff80ff 
 hi Special term=bold ctermfg=LightGreen guifg=Orange guibg=grey5
 "if &t_Co > 8
-  hi Statement  ctermfg=LightGreen guifg=LightCyan
+  hi Statement  ctermfg=Cyan guifg=LightCyan
 "endif
 hi Ignore ctermfg=DarkGrey guifg=grey20
+hi StorageClass ctermfg=LightCyan guifg=Cyan
+hi Type term=bold ctermfg=LightCyan guifg=Cyan
 
 " vim: sw=2
