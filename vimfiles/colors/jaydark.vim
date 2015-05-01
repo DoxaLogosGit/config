@@ -54,7 +54,9 @@ hi String ctermfg=Yellow guifg=Yellow
 hi Function ctermfg=Cyan guifg=LightMagenta
 hi Repeat ctermfg=Cyan guifg=DarkCyan
 hi Conditional ctermfg=Cyan guifg=DarkCyan
+hi Label ctermfg=Cyan guifg=DarkCyan
 hi Operator ctermfg=Cyan guifg=DarkCyan
+hi Statement ctermfg=Cyan guifg=DarkCyan
 
 hi Braces term=bold gui=bold ctermfg=Green guifg=green1
 hi SpecialSymbols term=bold gui=bold ctermfg=Green guifg=green1
@@ -62,7 +64,6 @@ hi SpecialSymbols term=bold gui=bold ctermfg=Green guifg=green1
 hi Constant ctermfg=Cyan guifg=#ff80ff 
 hi Special term=bold ctermfg=LightGreen guifg=Orange guibg=grey5
 "if &t_Co > 8
-  hi Statement  ctermfg=Cyan guifg=LightCyan
 "endif
 hi Ignore ctermfg=DarkGrey guifg=grey20
 hi StorageClass ctermfg=LightCyan guifg=Cyan
