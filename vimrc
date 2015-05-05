@@ -27,18 +27,7 @@ let TE_Use_Right_Window = 1
 " Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let python_highlight_all = 1
-au FileType python source $HOME/.vim/plugin/python.vim
-autocmd BufReadPost quickfix map <buffer> <silent> <CR> :.cc <CR> :ccl
-au FileType set ominfunc=pythoncomplete#Complete
-set completeopt=menuone,longest,preview
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Rainbow parentheses
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:rainbow_active = 1
-" let g:rainbow_load_separately = [
-let g:rainbow_guifgs = ['green1']
-let g:rainbow_ctermfgs = ['Green']
-
+set completeopt=menu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,7 +43,6 @@ let g:syntastic_auto_loc_list=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufNewFile,BufRead *.yang set filetype=yang
 au BufNewFile,BufRead *.jinja set filetype=jinja
-au FileType py call rainbow#load()
 
 let g:ack_default_options = " -H --nocolor --nogroup --column"
 let ackprg = "/usr/bin/ack"
@@ -73,7 +61,6 @@ set sw=4
 set et
 set number
 set smarttab
-set completeopt=menu
 "set guifont=Monospace:h10
 let generate_tags=1
 let g:ctags_statusline=1
