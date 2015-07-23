@@ -55,3 +55,6 @@
 [submodule "vimfiles/bundle/rust.vim"]
 	path = vimfiles/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vimfiles/bundle/vim-geeknote"]
+	path = vimfiles/bundle/vim-geeknote
+	url = git@github.com:neilagabriel/vim-geeknote.git
