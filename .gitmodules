@@ -55,3 +55,6 @@
 [submodule "vimfiles/bundle/vim-geeknote"]
 	path = vimfiles/bundle/vim-geeknote
 	url = git@github.com:neilagabriel/vim-geeknote.git
+[submodule "vimfiles/bundle/ag"]
+	path = vimfiles/bundle/ag
+	url = git@github.com:rking/ag.vim.git
