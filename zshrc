@@ -24,7 +24,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -72,6 +72,7 @@ LD_LIBRARY_PATH=/usr/ghs/safecpy_preload/\$LIB
 LD_PRELOAD=safecpy.so
 export PIP_INDEX_URL=http://pypi.adtran.com/simple
 export KEYTIMEOUT=1
+export P4IGNORE=~/.p4ignore
 
 
 source $ZSH/oh-my-zsh.sh
@@ -83,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='vim'
  fi
 
 # Compilation flags
