@@ -14,6 +14,7 @@ sudo apt-get install -yy wget
 sudo apt-get install -yy tmux=2.0-1~ppa1~t
 
 ln -s $CWD/vimrc $HOME/.vimrc
+ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
 ln -s $CWD/tmux.conf $HOME/.tmux.conf

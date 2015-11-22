@@ -53,7 +53,7 @@ plugins=(git github go docker sbt scala celery pip python virtualenv fabric vi-m
 
 # User configuration
 
-export PATH="/home/jatkinso/gradle-1.11/bin:/usr/lib/ccache:/usr/lib/ccache/bin:/home/jatkinso/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:/home/jatkinso/gradle-1.11/bin:/usr/lib/ccache:/usr/lib/ccache/bin:/home/jatkinso/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/packer"
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONPATH=$PYTHONPATH:/home/jatkinso/workdrive/Projects/package/PackageTools/MoveToBeta/src
 export P4CLIENT=jatkinso_ssd_space
