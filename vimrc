@@ -37,6 +37,10 @@ let g:syntastic_python_checkers=["pylint"]
 let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""Airline status section customization
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_section_gutter = substitute(v:this_session, '.*\(/\|\\\)', '', '')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""Setup syntax
@@ -87,7 +91,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden 
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
                          \ --ignore .git
                          \ --ignore .gradle
                          \ --ignore .svn
@@ -103,33 +107,33 @@ hi link MBEVisibleChanged Error
 hi MBEChanged gui=bold guibg=darkblue guifg=white
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplModSelTarget = 1
-" -------------------- 
-" ShowMarks 
-" -------------------- 
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" 
-let g:showmarks_enable = 1 
-let g:showmarks_hlline_lower = 1 
-let g:showmarks_hlline_upper = 1 
-let g:showmarks_hlline_other = 1 
-" For marks a-z 
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue 
-" For marks A-Z 
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed 
-" For all other marks 
-highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow 
-" For multiple marks on the same line. 
-highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen 
+" --------------------
+" ShowMarks
+" --------------------
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let g:showmarks_enable = 1
+let g:showmarks_hlline_lower = 1
+let g:showmarks_hlline_upper = 1
+let g:showmarks_hlline_other = 1
+" For marks a-z
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
+" For marks A-Z
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
+" For all other marks
+highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
+" For multiple marks on the same line.
+highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 " pylint mode
 " let g:PyLintCWindow = 1
 " let g:PyLintSigns = 1
 " let g:PyLintOnWrite = 1
 " let g:PyLintDisabledMessages = 'W0703'
 
-" -------------------- 
+" --------------------
 " Source Explorer
-" -------------------- 
+" --------------------
 " Initialize the height of Source Explorer
-" -------------------- 
+" --------------------
 noremap <silent> <F6> <Esc><Esc>:SessionList<CR>
 inoremap <silent> <F6> <Esc><Esc>:SessionList<CR>
 let g:sessionman_save_on_exit = 0
