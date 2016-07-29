@@ -59,7 +59,7 @@ export PYTHONPATH=$PYTHONPATH:/home/jatkinso/workdrive/Projects/package/PackageT
 export P4CLIENT=jatkinso_ssd_space
 export P4USER=jatkinso 
 export P4PORT=p4-cn-srv:1666
-export P4IGNORE=/home/jatkinso/workdrive/Projects/.ignore
+export P4IGNORE=~/.p4ignore
 export GHS_LMWHICH=ghs
 export GHS_LMHOST=corp-licmgr.adtran.com
 export GRADLE_HOME=/home/jatkinso/gradle-1.11
@@ -70,7 +70,7 @@ export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5
 # GHS old compiler workaround
 LD_LIBRARY_PATH=/usr/ghs/safecpy_preload/\$LIB
 LD_PRELOAD=safecpy.so
-export PIP_INDEX_URL=http://pypi.adtran.com/simple
+export PIP_EXTRA_INDEX_URL=http://pypi.adtran.com/simple
 export KEYTIMEOUT=1
 export P4IGNORE=~/.p4ignore
 
