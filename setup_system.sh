@@ -22,6 +22,9 @@ ln -s $CWD/zshrc $HOME/.zshrc
 mkdir -p $HOME/.tmux/plugins
 ln -s $CWD/tpm $HOME/.tmux/plugins/tpm
 ln -s $CWD/tmux-sensible $HOME/.tmux/plugins/tmux-sensible
+ln -s $CWD/tmux-resurrect $HOME/.tmux/plugins/tmux-resurrect
+ln -s $CWD/tmux-copycat $HOME/.tmux/plugins/tmux-copycat
+ln -s $CWD/tmux-continuum $HOME/.tmux/plugins/tmux-continuum
 
 pushd ../
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
