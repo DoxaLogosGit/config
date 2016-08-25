@@ -6,11 +6,14 @@ CWD=$(pwd)
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -yy python-dev
+sudo apt-get install -yy build-essential
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy git
 sudo apt-get install -yy zsh
 sudo apt-get install -yy wget
+sudo apt-get install -yy curl
+sudo apt-get install -yy silversearch-ag
 sudo apt-get install -yy tmux=2.0-1~ppa1~t
 
 ln -s $CWD/vimrc $HOME/.vimrc
