@@ -13,7 +13,7 @@ sudo apt-get install -yy git
 sudo apt-get install -yy zsh
 sudo apt-get install -yy wget
 sudo apt-get install -yy curl
-sudo apt-get install -yy silversearch-ag
+sudo apt-get install -yy silversearcher-ag
 sudo apt-get install -yy tmux=2.0-1~ppa1~t
 
 ln -s $CWD/vimrc $HOME/.vimrc
