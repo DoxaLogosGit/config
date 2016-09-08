@@ -23,6 +23,11 @@ ln -s $CWD/gitconfig $HOME/.gitconfig
 ln -s $CWD/tmux.conf $HOME/.tmux.conf
 ln -s $CWD/zshrc $HOME/.zshrc
 mkdir -p $HOME/.tmux/plugins
+mkdir -p $CWD/tmux-sensible
+mkdir -p $CWD/tmux-resurrect
+mkdir -p $CWD/tmux-continuum
+mkdir -p $CWD/tmux-yank
+mkdir -p $CWD/tmux-copycat
 ln -s $CWD/tpm $HOME/.tmux/plugins/tpm
 ln -s $CWD/tmux-sensible $HOME/.tmux/plugins/tmux-sensible
 ln -s $CWD/tmux-resurrect $HOME/.tmux/plugins/tmux-resurrect
