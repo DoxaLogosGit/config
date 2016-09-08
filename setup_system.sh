@@ -28,6 +28,7 @@ ln -s $CWD/tmux-sensible $HOME/.tmux/plugins/tmux-sensible
 ln -s $CWD/tmux-resurrect $HOME/.tmux/plugins/tmux-resurrect
 ln -s $CWD/tmux-copycat $HOME/.tmux/plugins/tmux-copycat
 ln -s $CWD/tmux-continuum $HOME/.tmux/plugins/tmux-continuum
+ln -s $CWD/tmux-yank $HOME/.tmux/plugins/tmux-yank
 
 pushd ../
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
