@@ -71,8 +71,8 @@ export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5
 LD_LIBRARY_PATH=/usr/ghs/safecpy_preload/\$LIB
 LD_PRELOAD=safecpy.so
 export PIP_EXTRA_INDEX_URL=http://pypi.adtran.com/simple
+export PIP_TRUSTED_HOST=pypi.adtran.com
 export KEYTIMEOUT=1
-export P4IGNORE=~/.p4ignore
 
 
 source $ZSH/oh-my-zsh.sh
