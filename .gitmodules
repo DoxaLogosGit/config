@@ -67,3 +67,6 @@
 [submodule "vimfiles/bundle/riv.vim"]
 	path = vimfiles/bundle/riv.vim
 	url = git@github.com:Rykka/riv.vim.git
+[submodule "vimfiles/bundle/vim-ripgrep"]
+	path = vimfiles/bundle/vim-ripgrep
+	url = git@github.com:jremmen/vim-ripgrep.git

@@ -3,7 +3,6 @@
 CWD=$(pwd)
 
 #install prerequsites
-sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -yy python-dev
 sudo apt-get install -yy build-essential
@@ -14,7 +13,7 @@ sudo apt-get install -yy zsh
 sudo apt-get install -yy wget
 sudo apt-get install -yy curl
 sudo apt-get install -yy silversearcher-ag
-sudo apt-get install -yy tmux=2.0-1~ppa1~t
+sudo apt-get install -yy tmux
 
 ln -s $CWD/vimrc $HOME/.vimrc
 ln -s $CWD/pylintrc $HOME/.pylintrc
