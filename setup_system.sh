@@ -9,13 +9,19 @@ sudo apt-get install -yy python-pip
 sudo apt-get install -yy python3-dev
 sudo apt-get install -yy python3-pip
 sudo apt-get install -yy build-essential
-sudo apt-get install -yy cmake
-sudo apt-get install -yy vim-gtk
-sudo apt-get install -yy nvim
-sudo apt-get install -yy fish
-sudo apt-get install -yy git
 sudo apt-get install -yy wget
 sudo apt-get install -yy curl
+sudo apt-get install -yy cmake
+sudo apt-get install -yy vim-gtk
+cd ..
+#setup newer neovim (Ubuntu 18.04)
+wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.apimage --appimage-extract
+sudo ln -s .squashfs-root/usr/bin/nvim /usr/bin/nvim
+cd config
+sudo apt-get install -yy fish
+sudo apt-get install -yy git
 sudo apt-get install -yy python3-nose
 sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
