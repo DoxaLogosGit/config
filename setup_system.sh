@@ -13,12 +13,14 @@ sudo apt-get install -yy wget
 sudo apt-get install -yy curl
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
-cd ..
-#setup newer neovim (Ubuntu 18.04)
+cd $HOME
+#install newer neovim (Ubuntu 18.04)
 wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
 chmod u+x nvim.appimage
-./nvim.apimage --appimage-extract
-sudo ln -s .squashfs-root/usr/bin/nvim /usr/bin/nvim
+./nvim.appimage --appimage-extract
+sudo ln -s squashfs-root/usr/bin/nvim /usr/bin/nvim
+
+
 cd config
 sudo apt-get install -yy fish
 sudo apt-get install -yy git
@@ -27,8 +29,13 @@ sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
 pip3 install --user neovim
 pip3 install --user pynvim
+pip install --user pynvim
+pip install --user neovim
 
-#ln -s $CWD/vimrc $HOME/.vimrc
+mkdir -p .config/nvim/bundle
+ln -s $CWD/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -s $CWD/nvim/colors $HOME/.config/nvim/colors
+
 ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
@@ -48,10 +55,15 @@ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
 rm ripgrep*
 
-cd ..
+#install neovim plugin manager
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh $HOME/.config/nvim/bundle
+rm installer.sh
+
+#cd $HOME
 #install oh-my-fish
-git clone https://github.com/oh-my-fish/oh-my-fish
-cd oh-my-fish
-bin/install --offline
-cd -
-cd config
+#git clone https://github.com/oh-my-fish/oh-my-fish
+#cd oh-my-fish
+#bin/install --offline
+#cd -
+#cd config
