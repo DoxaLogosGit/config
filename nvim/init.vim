@@ -7,8 +7,8 @@ endif
 set runtimepath+=/home/jgatkinsn/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
   
 " Required:
-if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/repos')
-   call dein#begin('/home/jgatkinsn/.config/nvim/bundle/repos')
+if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/')
+   call dein#begin('/home/jgatkinsn/.config/nvim/bundle/')
   
 " Let dein manage dein
 " Required:
@@ -28,7 +28,9 @@ if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/repos')
    call dein#add('rafi/awesome-vim-colorschemes')
    call dein#add('vim-scripts/sessionman.vim')
    call dein#add('tpope/vim-commentary')
-   call dein#add('ctrlpvim/ctrlp.vim')
+   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+   "call dein#add('ctrlpvim/ctrlp.vim')
    "call dein#add('vim-ctrlspace/vim-ctrlspace')
    "call dein#add('davidhalter/jedi-vim')
 " Required:
