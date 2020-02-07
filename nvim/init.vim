@@ -17,10 +17,11 @@ if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/repos')
 " Add or remove your plugins here like this:
    call dein#add('Shougo/neosnippet.vim')
    call dein#add('Shougo/neosnippet-snippets')
-   "call dein#add('Shougo/deoplete.nvim')
-   "call dein#add('zchee/deoplete-jedi')
+   call dein#add('Shougo/deoplete.nvim')
+   call dein#add('zchee/deoplete-clang')
+   call dein#add('zchee/deoplete-jedi')
    call dein#add('sheerun/vim-polyglot')
-   call dein#add('Rip-Rip/clang_complete')
+ "  call dein#add('Rip-Rip/clang_complete')
    call dein#add('scrooloose/nerdtree')
    call dein#add('vim-airline/vim-airline')
    call dein#add('jlanzarotta/bufexplorer')
@@ -29,8 +30,7 @@ if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/repos')
    call dein#add('tpope/vim-commentary')
    call dein#add('ctrlpvim/ctrlp.vim')
    "call dein#add('vim-ctrlspace/vim-ctrlspace')
-   call dein#add('davidhalter/jedi-vim')
-   "call dein#add('Valloric/YouCompleteMe')
+   "call dein#add('davidhalter/jedi-vim')
 " Required:
    call dein#end()
    call dein#save_state()
@@ -66,6 +66,8 @@ endif
 
 colorscheme jaydark
   
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 set viminfo='50,<50,s50,h,rA:,rB:,!
 set sessionoptions=options,tabpages,globals,curdir,winpos,resize,winsize,buffers
 let bex=".bak"
