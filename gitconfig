@@ -3,3 +3,5 @@
 	name = Jay Atkinson
 [push]
 	default = simple
+[core]
+	autocrlf = false
