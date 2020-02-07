@@ -28,9 +28,9 @@ sudo apt-get install -yy clang
 pip3 install --user neovim
 pip3 install --user pynvim
 
-ln -s $CWD/vimrc $HOME/.vimrc
+#ln -s $CWD/vimrc $HOME/.vimrc
 ln -s $CWD/pylintrc $HOME/.pylintrc
-ln -s $CWD/vimfiles $HOME/.vim
+ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
 ln -s $CWD/tmux.conf $HOME/.tmux.conf
 ln -s $CWD/fishrc $HOME/.fishrc
@@ -43,6 +43,7 @@ mkdir -p $CWD/tmux-copycat
 ln -s $CWD/tpm $HOME/.tmux/plugins/tpm
 ln -s $CWD/nvim $HOME/.config/nvim
 
+#install ripgrep (better recursive search utility -- super fast!)
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
 rm ripgrep*
