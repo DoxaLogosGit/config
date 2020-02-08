@@ -63,10 +63,16 @@ rm installer.sh
 cd config
 git submodule init
 git submodule update
-#cd $HOME
+
+
+#add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
+#if [ -t 1 ]; then
+#      exec fish
+#fi
+
+#do this below after you run setup system (issues with it until fish is default shell
+#cd ~/
 #install oh-my-fish
 #git clone https://github.com/oh-my-fish/oh-my-fish
 #cd oh-my-fish
 #bin/install --offline
-#cd -
-#cd config
