@@ -7,8 +7,8 @@ endif
 set runtimepath+=/home/jgatkinsn/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
   
 " Required:
-if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/repos')
-   call dein#begin('/home/jgatkinsn/.config/nvim/bundle/repos')
+if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/')
+   call dein#begin('/home/jgatkinsn/.config/nvim/bundle/')
   
 " Let dein manage dein
 " Required:

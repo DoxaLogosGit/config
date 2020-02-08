@@ -18,7 +18,7 @@ cd $HOME
 wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
-sudo ln -s squashfs-root/usr/bin/nvim /usr/bin/nvim
+sudo ln -s $HOME/squashfs-root/usr/bin/nvim /usr/bin/nvim
 
 
 cd config
@@ -32,7 +32,7 @@ pip3 install --user pynvim
 pip install --user pynvim
 pip install --user neovim
 
-mkdir -p .config/nvim/bundle
+mkdir -p $HOME/.config/nvim/bundle
 ln -s $CWD/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -s $CWD/nvim/colors $HOME/.config/nvim/colors
 
