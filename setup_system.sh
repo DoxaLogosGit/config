@@ -23,7 +23,6 @@ sudo ln -s $HOME/squashfs-root/usr/bin/nvim /usr/bin/nvim
 
 cd config
 sudo apt-get install -yy fish
-sudo apt-get install -yy git
 sudo apt-get install -yy python3-nose
 sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
@@ -60,6 +59,10 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh $HOME/.config/nvim/bundle
 rm installer.sh
 
+#pull rest of submodules
+cd config
+git submodule init
+git submodule update
 #cd $HOME
 #install oh-my-fish
 #git clone https://github.com/oh-my-fish/oh-my-fish
