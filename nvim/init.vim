@@ -89,6 +89,7 @@ set nowrap
 set swb=useopen
 set tpm=10
 set nohls
+set statusline+=%{FugitiveStatusline()}
 let b:loadcount=0
 ""
 " Reset Jedi defaults to not mess with NERDTree
