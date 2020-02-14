@@ -10,6 +10,8 @@ sudo apt-get install -yy python3-dev
 sudo apt-get install -yy python3-pip
 sudo apt-get install -yy build-essential
 sudo apt-get install -yy wget
+sudo apt-get install -yy vifm
+sudo apt-get install -yy ranger
 sudo apt-get install -yy curl
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
