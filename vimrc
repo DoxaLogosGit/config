@@ -56,8 +56,8 @@ let g:ackprg = "/usr/bin/ack"
 
 let g:C_AuthorName = "Jay Atkinson"
 let g:C_AuthorRef = "JGA"
-let g:C_Email = "jay.atkinson@adtran.com"
-let g:C_Company = "ADTRAN, Inc."
+let g:C_Email = "jack.g.atkinson@saic.com"
+let g:C_Company = "SAIC, in"
 "let g:C_Comments = no
 set viminfo='50,<50,s50,h,rA:,rB:,!
 set sessionoptions=options,tabpages,globals,curdir,winpos,resize,winsize,buffers
