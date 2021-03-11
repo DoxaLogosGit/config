@@ -8,6 +8,7 @@ sudo apt-get install -yy python-dev
 sudo apt-get install -yy python-pip
 sudo apt-get install -yy python3-dev
 sudo apt-get install -yy python3-pip
+sudo apt-get install -yy python3-venv
 sudo apt-get install -yy build-essential
 sudo apt-get install -yy wget
 sudo apt-get install -yy vifm
@@ -15,13 +16,8 @@ sudo apt-get install -yy ranger
 sudo apt-get install -yy curl
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
-cd $HOME
-#install newer neovim (Ubuntu 18.04)
-wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage --appimage-extract
-sudo ln -s $HOME/squashfs-root/usr/bin/nvim /usr/bin/nvim
-
+sudo apt-get install -yy neovim
+sudo apt-get install -yy ripgrep
 
 cd config
 sudo apt-get install -yy fish
@@ -34,6 +30,8 @@ pip install --user pynvim
 pip install --user neovim
 
 mkdir -p $HOME/.config/nvim/bundle
+mkdir -p $HOME/.vim-tmp
+mkdir -p $HOME/.tmp
 ln -s $CWD/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -s $CWD/nvim/colors $HOME/.config/nvim/colors
 
@@ -51,10 +49,6 @@ mkdir -p $CWD/tmux-copycat
 ln -s $CWD/tpm $HOME/.tmux/plugins/tpm
 ln -s $CWD/nvim $HOME/.config/nvim
 
-#install ripgrep (better recursive search utility -- super fast!)
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
-sudo dpkg -i ripgrep_11.0.2_amd64.deb
-rm ripgrep*
 
 #install neovim plugin manager
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
