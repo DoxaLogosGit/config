@@ -18,6 +18,8 @@ sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy neovim
 sudo apt-get install -yy ripgrep
+sudo apt-get install -yy npm
+sudo apt-get install -yy clangd-9
 
 cd config
 sudo apt-get install -yy fish
@@ -60,6 +62,13 @@ cd config
 git submodule init
 git submodule update
 
+
+#be sure to install CoC for typescript in NVIM 
+#CoCInstall coc-tsserver
+#CocInstall coc-eslint
+#CocInstall coc-json
+#CocInstall coc-pyright
+#CocInstall coc-clangd
 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then
