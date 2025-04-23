@@ -1,56 +1,28 @@
-"dein Scripts-----------------------------
-if &compatible
-   set nocompatible               " Be iMproved
-endif
+  
+call plug#begin()
+  
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'vim-scripts/sessionman.vim'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'build': './install --all', 'merged': 0 }
+Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
+Plug 'Tetralux/odin.vim'
 
-" Required:
-set runtimepath+=/home/jgatkinsn/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
+call plug#end()
   
 " Required:
-if dein#load_state('/home/jgatkinsn/.config/nvim/bundle/')
-   call dein#begin('/home/jgatkinsn/.config/nvim/bundle/')
+"filetype plugin indent on
+"syntax enable
   
-" Let dein manage dein
-" Required:
-   call dein#add('/home/jgatkinsn/.config/nvim/bundle/repos/github.com/Shougo/dein.vim')
-  
-" Add or remove your plugins here like this:
-   call dein#add('Shougo/neosnippet.vim')
-   call dein#add('Shougo/neosnippet-snippets')
-"   call dein#add('Shougo/deoplete.nvim')
-   call dein#add('neoclide/coc.nvim')
-"   call dein#add('zchee/deoplete-clang')
-"   call dein#add('zchee/deoplete-jedi')
-   call dein#add('ianks/vim-tsx')
-   call dein#add('leafgarland/typescript-vim')
-   call dein#add('sheerun/vim-polyglot')
-   call dein#add('tpope/vim-fugitive')
-   call dein#add('calviken/vim-gdscript3')
- "  call dein#add('Rip-Rip/clang_complete')
-   call dein#add('scrooloose/nerdtree')
-   call dein#add('vim-airline/vim-airline')
-   call dein#add('jlanzarotta/bufexplorer')
-   call dein#add('rafi/awesome-vim-colorschemes')
-   call dein#add('vim-scripts/sessionman.vim')
-   call dein#add('tpope/vim-commentary')
-   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
-   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-   "call dein#add('ctrlpvim/ctrlp.vim')
-   "call dein#add('vim-ctrlspace/vim-ctrlspace')
-   "call dein#add('davidhalter/jedi-vim')
-" Required:
-   call dein#end()
-   call dein#save_state()
-endif
-  
-" Required:
-filetype plugin indent on
-syntax enable
-  
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
   
 "End dein Scripts-------------------------
 "
@@ -93,11 +65,9 @@ set nowrap
 set swb=useopen
 set tpm=10
 set nohls
-set statusline+=%{FugitiveStatusline()}
+"set statusline+=%{FugitiveStatusline()}
 let b:loadcount=0
-""
-" Reset Jedi defaults to not mess with NERDTree
-""
+autocmd FileType odin set shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backup settings

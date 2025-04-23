@@ -31,11 +31,9 @@ pip3 install --user pynvim
 pip install --user pynvim
 pip install --user neovim
 
-mkdir -p $HOME/.config/nvim/bundle
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
-ln -s $CWD/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -s $CWD/nvim/colors $HOME/.config/nvim/colors
+ln -s $CWD/nvim/ $HOME/.config/nvim
 
 ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
