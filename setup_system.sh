@@ -31,6 +31,9 @@ pip3 install --user pynvim
 pip install --user pynvim
 pip install --user neovim
 
+#install starship
+sudo curl -sS https://starship.rs/install.sh | sh
+
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
 ln -s $CWD/nvim/ $HOME/.config/nvim
