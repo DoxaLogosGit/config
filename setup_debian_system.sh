@@ -18,8 +18,7 @@ sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy neovim
 sudo apt-get install -yy ripgrep
-sudo apt-get install -yy npm
-sudo apt-get install -yy clangd-9
+sudo apt=get install -yy ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
 
 cd config
 sudo apt-get install -yy fish
@@ -34,15 +33,31 @@ pip install --user neovim
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
 
+#install yazi
+wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip
+unzip yazi-x86_64-unknown-linux-gnu.zip
+sudo mv yazi-x86_64-unknown-linux-gnu/yazi /usr/bin/
+rm -rf yazi-x86_64-unknown-linux-gnu*
+
+#install eza 
+wget https://github.com/eza-community/eza/releases/download/v0.21.1/eza_x86_64-unknown-linux-gnu.zip
+unzip eza_x86_64-unknown-linux-gnu.zip
+sudo mv eza /usr/bin/
+rm -rf eza*
+
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
-ln -s $CWD/nvim/ $HOME/.config/nvim
+mkdir -p $HOME/.config/fish
 
+ln -s $CWD/nvim/ $HOME/.config/nvim
+ln -s $CWD/yazi  $HOME/.config/yazi
 ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
 ln -s $CWD/tmux.conf $HOME/.tmux.conf
-ln -s $CWD/fishrc $HOME/.fishrc
+ln -s $CWD/config.fish $HOME/.config/fish/config.fish
+ln -s $CWD/starship.toml $HOME/.config/starship.toml
+
 mkdir -p $HOME/.tmux/plugins
 mkdir -p $CWD/tmux-sensible
 mkdir -p $CWD/tmux-resurrect
@@ -50,13 +65,8 @@ mkdir -p $CWD/tmux-continuum
 mkdir -p $CWD/tmux-yank
 mkdir -p $CWD/tmux-copycat
 ln -s $CWD/tpm $HOME/.tmux/plugins/tpm
-ln -s $CWD/nvim $HOME/.config/nvim
 
 
-#install neovim plugin manager
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh $HOME/.config/nvim/bundle
-rm installer.sh
 
 #pull rest of submodules
 cd config
