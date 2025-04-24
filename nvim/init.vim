@@ -4,20 +4,20 @@ call plug#begin()
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ianks/vim-tsx'
-Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'vim-scripts/sessionman.vim'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'build': './install --all', 'merged': 0 }
-Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'Tetralux/odin.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'echasnovski/mini.nvim'
+Plug 'tadmccorkle/markdown.nvim'
 
 call plug#end()
+source $HOME/.config/nvim/init.lua.vim
+
   
 " Required:
 "filetype plugin indent on
@@ -65,9 +65,10 @@ set nowrap
 set swb=useopen
 set tpm=10
 set nohls
-"set statusline+=%{FugitiveStatusline()}
+set statusline+=%{FugitiveStatusline()}
 let b:loadcount=0
 autocmd FileType odin set shiftwidth=4
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backup settings
