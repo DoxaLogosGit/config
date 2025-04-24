@@ -13,6 +13,8 @@ Plug 'Tetralux/odin.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'echasnovski/mini.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'tadmccorkle/markdown.nvim'
 
 call plug#end()
