@@ -1,2 +1,3 @@
 fish_add_path -a --path ~/projects/odin
+fish_add_path -a --path ~/.local/bin
 
