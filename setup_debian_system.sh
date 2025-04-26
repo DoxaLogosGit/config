@@ -17,6 +17,7 @@ sudo apt-get install -yy curl
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy neovim
+sudo apt-get install -yy glow
 sudo apt-get install -yy ripgrep
 sudo apt=get install -yy ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
 

@@ -13,6 +13,7 @@ sudo dnf install -yy ranger
 sudo dnf install -yy curl
 sudo dnf install -yy cmake
 sudo dnf install -yy neovim
+sudo dnf install -yy glow
 sudo dnf install -yy ripgrep
 sudo dnf install -yy tmux
 sudo dnf install -yy fzf

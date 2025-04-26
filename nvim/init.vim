@@ -6,18 +6,19 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'ianks/vim-tsx'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'Tetralux/odin.vim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'echasnovski/mini.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'tadmccorkle/markdown.nvim'
+"Plug 'epwalsh/obsidian.nvim'
 
 call plug#end()
+
 source $HOME/.config/nvim/init.lua.vim
 
   
@@ -67,7 +68,7 @@ set nowrap
 set swb=useopen
 set tpm=10
 set nohls
-set statusline+=%{FugitiveStatusline()}
+"set statusline+=%{FugitiveStatusline()}
 let b:loadcount=0
 autocmd FileType odin set shiftwidth=4
 
