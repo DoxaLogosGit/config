@@ -1,20 +1,25 @@
   
 call plug#begin()
   
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'ianks/vim-tsx'
-Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'Tetralux/odin.vim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'echasnovski/mini.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'tadmccorkle/markdown.nvim'
+Plug 'mhartington/formatter.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-lint'
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-neotest/nvim-nio'
+
+
 "Plug 'epwalsh/obsidian.nvim'
 
 call plug#end()
@@ -93,4 +98,4 @@ inoremap <silent> <C-K> <C-W>k
 noremap <silent> <C-L> <C-W>l
 inoremap <silent> <C-L> <C-W>l
 map <C-SPACE> o<ESC>
-map <leader>n :NERDTreeToggle<CR>
+map <leader>f :lua MiniFiles.open()<CR>
