@@ -4,6 +4,8 @@ end
 starship init fish | source
 set -gx PATH $PATH ~/projects/Odin
 set -gx PATH $PATH ~/.local/bin
+set -gx PATH $PATH ~/projects/ols
+set -gx ODIN_ROOT  ~/projects/Odin
 alias ll "eza --icons --color=always --color-scale=all -l --git"
 
 function y
