@@ -3,7 +3,6 @@ call plug#begin()
   
 Plug 'scrooloose/nerdtree'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'Tetralux/odin.vim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'echasnovski/mini.nvim'
@@ -18,6 +17,15 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'nvim-neotest/nvim-nio'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'bluz71/vim-moonfly-colors', {'as':'moonfly'}
+Plug 'dasupradyumna/midnight.nvim'
+Plug 'yorumicolors/yorumi.nvim'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'ray-x/starry.nvim'
+Plug 'Mofiqul/adwaita.nvim'
 
 
 "Plug 'epwalsh/obsidian.nvim'
@@ -33,26 +41,16 @@ source $HOME/.config/nvim/init.lua.vim
   
   
 "End dein Scripts-------------------------
-"
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-  if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
+set termguicolors
+set background "dark"
 
-colorscheme jaydark
-  
+"colorscheme yorumi
+"colorscheme github_dark_high_contrast
+"colorscheme oxocarbon
+"colorscheme jaydark
+colorscheme moonfly
+let g:moonflyTransparent = v:true
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 set viminfo='50,<50,s50,h,rA:,rB:,!
@@ -73,7 +71,6 @@ set nowrap
 set swb=useopen
 set tpm=10
 set nohls
-"set statusline+=%{FugitiveStatusline()}
 let b:loadcount=0
 autocmd FileType odin set shiftwidth=4
 

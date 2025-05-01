@@ -44,8 +44,21 @@ require("mason-lspconfig").setup_handlers {
     -- Next, you can provide a dedicated handler for specific servers.
     -- For example, a handler override for the `rust_analyzer`:
 }
+-- 
 vim.lsp.enable('jedi_language_server')
 vim.lsp.enable('clangd')
 vim.lsp.enable('ols')
+-- monkey with colorschemes
+-- require("moonfly").palette
+require("moonfly").custom_colors({
+   bg = "#000000",
+   fg = "#FFFFFF",
+})
+require("starry").setup()
+vim.g.adwaita_darker = true
+vim.g.adwaita_disable_cursorline = true
+vim.g.adwaita_transparent = true
+vim.cmd[[colorscheme adwaita]]
+
 
 EOF
