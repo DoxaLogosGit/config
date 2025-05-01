@@ -13,6 +13,8 @@ require('mini.sessions').setup({})
 require('mini.fuzzy').setup({})
 require('mini.icons').setup({})
 require('mini.colors').setup({})
+require('mini.notify').setup()
+require('mini.map').setup()
 require('mini.indentscope').setup({})
 -- snippets
 -- local gen_loader = require('mini.snippets').gen_loader

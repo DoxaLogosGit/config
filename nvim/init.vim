@@ -26,6 +26,7 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug 'ray-x/starry.nvim'
 Plug 'Mofiqul/adwaita.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 
 
 "Plug 'epwalsh/obsidian.nvim'
