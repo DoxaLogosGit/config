@@ -45,6 +45,7 @@ source $HOME/.config/nvim/init.lua.vim
 
 set termguicolors
 set background "dark"
+set clipboard=unnamedplus
 
 "colorscheme yorumi
 "colorscheme github_dark_high_contrast
