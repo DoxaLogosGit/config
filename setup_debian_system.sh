@@ -18,18 +18,20 @@ sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy neovim
 sudo apt-get install -yy glow
-sudo apt-get install -yy ripgrep
+sudo apt-get install -yy nu
+sudo apt-get install -yy bat
 sudo apt=get install -yy ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
-
-cd config
 sudo apt-get install -yy fish
 sudo apt-get install -yy python3-nose
 sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
+
+cd config
 pip3 install --user neovim
 pip3 install --user pynvim
 pip install --user pynvim
 pip install --user neovim
+sudo pip3 install -yy tldr
 
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
@@ -74,13 +76,8 @@ cd config
 git submodule init
 git submodule update
 
+echo 'remember to download nerd-fonts! https://www.nerdfonts.com/font-downloads'
 
-#be sure to install CoC for typescript in NVIM 
-#CoCInstall coc-tsserver
-#CocInstall coc-eslint
-#CocInstall coc-json
-#CocInstall coc-pyright
-#CocInstall coc-clangd
 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then

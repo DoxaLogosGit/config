@@ -13,6 +13,8 @@ sudo dnf install -yy ranger
 sudo dnf install -yy curl
 sudo dnf install -yy cmake
 sudo dnf install -yy neovim
+sudo dnf install -yy imagemagick
+sudo dnf install -yy fd-find
 sudo dnf install -yy glow
 sudo dnf install -yy ripgrep
 sudo dnf install -yy tmux
@@ -24,12 +26,12 @@ sudo dnf install -yy clang-devel
 sudo dnf install -yy g++
 sudo dnf install -yy jq
 sudo dnf install -yy nu
+sudo dnf install -yy zoxide
 sudo dnf install -yy bat
-sudo dnf install -yy bat
-
-cd config
 sudo dnf install -yy fish
 sudo dnf install -yy tmux
+
+cd config
 pip3 install --user neovim
 pip3 install --user pynvim
 pip install --user pynvim
@@ -61,7 +63,6 @@ ln -s $CWD/yazi/ $HOME/.config/yazi
 ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
-ln -s $CWD/fishrc $HOME/.fishrc
 ln -s $CWD/config.fish $HOME/.config/fish/config.fish
 ln -s $CWD/starship.toml $HOME/.config/starship.toml
 
