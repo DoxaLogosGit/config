@@ -57,6 +57,7 @@ mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
 mkdir -p $HOME/.config/fish
 mkdir -p $HOME/.tmux/plugins
+mkdir -p $HOME/.config/nushell
 
 ln -s $CWD/nvim/ $HOME/.config/nvim
 ln -s $CWD/yazi/ $HOME/.config/yazi
@@ -64,6 +65,7 @@ ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
 ln -s $CWD/config.fish $HOME/.config/fish/config.fish
+ln -s $CWD/config.nu $HOME/.config/nushell/config.nu
 ln -s $CWD/starship.toml $HOME/.config/starship.toml
 
 #setup tmux dependencies
