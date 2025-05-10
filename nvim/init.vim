@@ -86,6 +86,9 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp/tmp
 set writebackup
 " ---------------------------------
+"  mappings
+" ---------------------------------
+
 noremap <silent> <F2> <Esc><Esc>:w!<CR>
 inoremap <silent> <F2> <Esc><Esc>:w!<CR>
 noremap <silent> <C-J> <C-W>j
@@ -96,5 +99,9 @@ noremap <silent> <C-K> <C-W>k
 inoremap <silent> <C-K> <C-W>k
 noremap <silent> <C-L> <C-W>l
 inoremap <silent> <C-L> <C-W>l
+nnoremap <leader>f :lua MiniFiles.open()<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 map <C-SPACE> o<ESC>
-map <leader>f :lua MiniFiles.open()<CR>
