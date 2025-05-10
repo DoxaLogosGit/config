@@ -23,6 +23,9 @@ sudo dnf install -yy clang
 sudo dnf install -yy clang-devel
 sudo dnf install -yy g++
 sudo dnf install -yy jq
+sudo dnf install -yy nu
+sudo dnf install -yy bat
+sudo dnf install -yy bat
 
 cd config
 sudo dnf install -yy fish
@@ -31,6 +34,7 @@ pip3 install --user neovim
 pip3 install --user pynvim
 pip install --user pynvim
 pip install --user neovim
+sudo pip3 install -yy tldr
 
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
@@ -53,6 +57,7 @@ mkdir -p $HOME/.config/fish
 mkdir -p $HOME/.tmux/plugins
 
 ln -s $CWD/nvim/ $HOME/.config/nvim
+ln -s $CWD/yazi/ $HOME/.config/yazi
 ln -s $CWD/pylintrc $HOME/.pylintrc
 ln -s $CWD/nvim/vimfiles $HOME/.vim
 ln -s $CWD/gitconfig $HOME/.gitconfig
@@ -75,6 +80,7 @@ cd config
 git submodule init
 git submodule update
 
+echo 'remember to download nerd-fonts! https://www.nerdfonts.com/font-downloads'
 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then
