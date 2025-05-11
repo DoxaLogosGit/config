@@ -51,6 +51,7 @@ require("mason-lspconfig").setup_handlers {
 vim.lsp.enable('jedi_language_server')
 vim.lsp.enable('clangd')
 vim.lsp.enable('ols')
+vim.lsp.enable('rust_analyzer')
 -- monkey with colorschemes
 -- require("moonfly").palette
 require("moonfly").custom_colors({

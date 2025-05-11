@@ -2,9 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 starship init fish | source
-set -gx PATH $PATH ~/projects/Odin
-set -gx PATH $PATH ~/.local/bin
-set -gx PATH $PATH ~/projects/ols
+set -gx PATH $PATH ~/projects/Odin ~/.local/bin ~/projects/ols 
 set -gx ODIN_ROOT  ~/projects/Odin
 alias ll "eza --icons --color=always --color-scale=all -l --git"
 

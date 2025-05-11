@@ -25,6 +25,7 @@ sudo apt-get install -yy fish
 sudo apt-get install -yy python3-nose
 sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
+sudo apt-get install -yy rust cargo
 
 cd config
 pip3 install --user neovim

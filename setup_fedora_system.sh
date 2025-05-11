@@ -30,6 +30,7 @@ sudo dnf install -yy zoxide
 sudo dnf install -yy bat
 sudo dnf install -yy fish
 sudo dnf install -yy tmux
+sudo dnf install -yy rust cargo
 
 cd config
 pip3 install --user neovim
