@@ -19,19 +19,14 @@ sudo apt-get install -yy vim-gtk
 sudo apt-get install -yy neovim
 sudo apt-get install -yy glow
 sudo apt-get install -yy nu
+sudo apt-get install -yy lua
 sudo apt-get install -yy bat
-sudo apt=get install -yy ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+sudo apt-get install -yy ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
 sudo apt-get install -yy fish
 sudo apt-get install -yy python3-nose
 sudo apt-get install -yy tmux
 sudo apt-get install -yy clang
 sudo apt-get install -yy rust cargo
-
-cd config
-pip3 install --user neovim
-pip3 install --user pynvim
-pip install --user pynvim
-pip install --user neovim
 sudo pip3 install -yy tldr
 
 #install starship
@@ -79,7 +74,34 @@ cd config
 git submodule init
 git submodule update
 
-echo 'remember to download nerd-fonts! https://www.nerdfonts.com/font-downloads'
+echo 'Downloading fonts from https://www.nerdfonts.com/font-downloads'
+echo 'If installing on WSL, these need to be install on the Windows side and font updated in WSL profile'
+mkdir fonts
+cd fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/UbuntuMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdFontsSymbolsOnly.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/AdwaitaMono.zip
+mkdir nerd-fonts-vf
+mv *.zip nerf-fonts-vf
+cd nerd-fonts-vf
+unzip -o Ubuntu.zip
+unzip -o UbuntuMono.zip
+unzip -o JetBrainsMono.zip
+unzip -o FiraMono.zip
+unzip -o FiraCode.zip
+unzip -o AdwaitaMono.zip
+unzip -o NerdFontsSymbolsOnly.zip
+cd ..
+mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/fontconfig/conf.avail
+mv nerd-fonts-vf/*.conf ~/.local/share/fontconfig/conf.avail
+mv nerd-fonts-vf ~/.local/share/fonts
+fc-cache -vf
+cd 
 
 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
