@@ -31,10 +31,13 @@ sudo pip3 install -yy tldr
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
 
-echo "install rust-analyzer"
+echo "install rust-analyzer and other lsp support utils"
 mkdir -p ~/.local/bin
 curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
+pip install jedi_language_server
+pip install flake8
+pip install vale
 
 #install yazi
 wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip

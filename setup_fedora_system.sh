@@ -32,7 +32,7 @@ sudo dnf install -yy fish
 sudo dnf install -yy tmux
 sudo dnf install -yy 7z
 sudo dnf install -yy rust cargo
-sudo pip3 install -yy tldr
+sudo pip install -yy tldr
 
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
@@ -48,6 +48,13 @@ wget https://github.com/eza-community/eza/releases/download/v0.21.1/eza_x86_64-u
 unzip eza_x86_64-unknown-linux-gnu.zip
 sudo mv eza /usr/bin/
 rm -rf eza*
+
+echo "install rust-analyzer and other utilities for lsp's"
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
+pip install jedi_language_server
+pip install flake8
+pip install vale
 
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
@@ -109,9 +116,6 @@ mv nerd-fonts-vf ~/.local/share/fonts
 fc-cache -vf
 cd 
 
-echo "install rust-analyzer"
-curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
-chmod +x ~/.local/bin/rust-analyzer
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then
 #      exec fish
