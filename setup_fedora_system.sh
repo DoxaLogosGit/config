@@ -9,7 +9,6 @@ sudo dnf install -yy python-pip
 sudo dnf install -yy wget
 sudo dnf install -yy vifm
 sudo dnf install -yy vim
-sudo dnf install -yy ranger
 sudo dnf install -yy curl
 sudo dnf install -yy cmake
 sudo dnf install -yy lua
@@ -31,6 +30,7 @@ sudo dnf install -yy zoxide
 sudo dnf install -yy bat
 sudo dnf install -yy fish
 sudo dnf install -yy tmux
+sudo dnf install -yy 7z
 sudo dnf install -yy rust cargo
 sudo pip3 install -yy tldr
 
@@ -108,6 +108,10 @@ mv nerd-fonts-vf/*.conf ~/.local/share/fontconfig/conf.avail
 mv nerd-fonts-vf ~/.local/share/fonts
 fc-cache -vf
 cd 
+
+echo "install rust-analyzer"
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then
 #      exec fish

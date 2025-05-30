@@ -12,7 +12,6 @@ sudo apt-get install -yy python3-venv
 sudo apt-get install -yy build-essential
 sudo apt-get install -yy wget
 sudo apt-get install -yy vifm
-sudo apt-get install -yy ranger
 sudo apt-get install -yy curl
 sudo apt-get install -yy cmake
 sudo apt-get install -yy vim-gtk
@@ -31,6 +30,11 @@ sudo pip3 install -yy tldr
 
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
+
+echo "install rust-analyzer"
+mkdir -p ~/.local/bin
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
 
 #install yazi
 wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip
@@ -102,6 +106,7 @@ mv nerd-fonts-vf/*.conf ~/.local/share/fontconfig/conf.avail
 mv nerd-fonts-vf ~/.local/share/fonts
 fc-cache -vf
 cd 
+
 
 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
