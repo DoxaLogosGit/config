@@ -12,6 +12,7 @@ sudo dnf install -yy vim
 sudo dnf install -yy ranger
 sudo dnf install -yy curl
 sudo dnf install -yy cmake
+sudo dnf install -yy lua
 sudo dnf install -yy neovim
 sudo dnf install -yy imagemagick
 sudo dnf install -yy fd-find
@@ -31,12 +32,6 @@ sudo dnf install -yy bat
 sudo dnf install -yy fish
 sudo dnf install -yy tmux
 sudo dnf install -yy rust cargo
-
-cd config
-pip3 install --user neovim
-pip3 install --user pynvim
-pip install --user pynvim
-pip install --user neovim
 sudo pip3 install -yy tldr
 
 #install starship
@@ -59,6 +54,7 @@ mkdir -p $HOME/.tmp
 mkdir -p $HOME/.config/fish
 mkdir -p $HOME/.tmux/plugins
 mkdir -p $HOME/.config/nushell
+mkdir -p $HOME/.local/share/nvim/plugged
 
 ln -s $CWD/nvim/ $HOME/.config/nvim
 ln -s $CWD/yazi/ $HOME/.config/yazi
@@ -84,16 +80,46 @@ cd config
 git submodule init
 git submodule update
 
-echo 'remember to download nerd-fonts! https://www.nerdfonts.com/font-downloads'
-
+echo 'Downloading fonts from https://www.nerdfonts.com/font-downloads'
+echo 'If installing on WSL, these need to be install on the Windows side and font updated in WSL profile'
+mkdir fonts
+cd fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/UbuntuMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdFontsSymbolsOnly.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/AdwaitaMono.zip
+mkdir nerd-fonts-vf
+mv *.zip nerf-fonts-vf
+cd nerd-fonts-vf
+unzip -o Ubuntu.zip
+unzip -o UbuntuMono.zip
+unzip -o JetBrainsMono.zip
+unzip -o FiraMono.zip
+unzip -o FiraCode.zip
+unzip -o AdwaitaMono.zip
+unzip -o NerdFontsSymbolsOnly.zip
+cd ..
+mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/fontconfig/conf.avail
+mv nerd-fonts-vf/*.conf ~/.local/share/fontconfig/conf.avail
+mv nerd-fonts-vf ~/.local/share/fonts
+fc-cache -vf
+cd 
 #add this to bottom of your bashrc if on Ubuntu App for Windows 10, else just change your shell with chsh
 #if [ -t 1 ]; then
 #      exec fish
 #fi
 
+echo "Don't forget to setup fish and oh-my-fish"
+echo "chsh"
+echo "/usr/bin/fish"
+echo "reset"
 #do this below after you run setup system (issues with it until fish is default shell
-#cd ~/
 #install oh-my-fish
-#git clone https://github.com/oh-my-fish/oh-my-fish
-#cd oh-my-fish
-#bin/install --offline
+echo "cd ~/"
+echo "git clone https://github.com/oh-my-fish/oh-my-fish"
+echo "cd oh-my-fish"
+echo "bin/install --offline"
