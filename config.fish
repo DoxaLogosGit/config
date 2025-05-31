@@ -10,7 +10,7 @@ alias ll "eza --icons --color=always --color-scale=all -l --git"
 set name_list $(string split "-" $(uname -r))
 
 if string match -qi -- "WSL2" $name_list
-    set -gx TERM linux
+    set -gx TERM xterm-256color
 end
 
 function y
