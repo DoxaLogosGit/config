@@ -4,35 +4,53 @@ CWD=$(pwd)
 
 #install prerequsites
 sudo dnf update
+#build tools
+sudo dnf install -yy cmake
+sudo dnf install -yy make
+sudo dnf install -yy g++
+#more languages
+sudo dnf install -yy clang
+sudo dnf install -yy rust cargo
+sudo dnf install -yy clang-devel
 sudo dnf install -yy python-dev
 sudo dnf install -yy python-pip
-sudo dnf install -yy wget
-sudo dnf install -yy vifm
-sudo dnf install -yy vim
-sudo dnf install -yy curl
-sudo dnf install -yy cmake
 sudo dnf install -yy lua
+#editors
+sudo dnf install -yy vim
 sudo dnf install -yy neovim
-sudo dnf install -yy imagemagick
-sudo dnf install -yy fd-find
-sudo dnf install -yy glow
-sudo dnf install -yy ripgrep
+#terminal lifeline
 sudo dnf install -yy tmux
-sudo dnf install -yy fzf
+#general utilities
+sudo dnf install -yy imagemagick
+sudo dnf install -yy glow
 sudo dnf install -yy poppler
 sudo dnf install -yy ffmpeg
-sudo dnf install -yy clang
-sudo dnf install -yy clang-devel
-sudo dnf install -yy g++
 sudo dnf install -yy jq
-sudo dnf install -yy nu
-sudo dnf install -yy zoxide
-sudo dnf install -yy bat
-sudo dnf install -yy fish
-sudo dnf install -yy tmux
-sudo dnf install -yy 7z
-sudo dnf install -yy rust cargo
+sudo dnf install -yy moreutils
+sudo dnf install -yy asciinema
+sudo dnf copr enable -y atim/lazydocker
+sudo dnf install -yy lazydocker
+#system stuff
+sudo dnf install -yy fastfetch
+sudo dnf install -yy dstat
+sudo dnf install -yy progress
+sudo dnf install -yy procs
+#file system stuff
+sudo dnf install -yy zoxide bat fd-find ripgrep fzf 7z iotop
+#disk stuff
+sudo dnf install -yy ncdu duf 
+#network stuff
+sudo dnf install -yy wget curl lshw mtr tshark ipcalc
+#python stuff for system
 sudo pip install -yy tldr
+sudo pip install -yy bpytop
+sudo pip install -yy glances
+sudo pip install -yy uv
+sudo pip install -yy unp
+
+#shells
+sudo dnf install -yy fish
+sudo dnf install -yy nu
 
 #install starship
 sudo curl -sS https://starship.rs/install.sh | sh
