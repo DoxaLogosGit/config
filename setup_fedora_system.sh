@@ -12,7 +12,7 @@ sudo dnf install -yy g++
 sudo dnf install -yy clang
 sudo dnf install -yy rust cargo
 sudo dnf install -yy clang-devel
-sudo dnf install -yy python-dev
+sudo dnf install -yy python-devel
 sudo dnf install -yy python-pip
 sudo dnf install -yy lua
 #editors
@@ -21,7 +21,7 @@ sudo dnf install -yy neovim
 #terminal lifeline
 sudo dnf install -yy tmux
 #general utilities
-sudo dnf install -yy imagemagick
+sudo dnf install -yy ImageMagick
 sudo dnf install -yy glow
 sudo dnf install -yy poppler
 sudo dnf install -yy ffmpeg
@@ -42,11 +42,11 @@ sudo dnf install -yy ncdu duf
 #network stuff
 sudo dnf install -yy wget curl lshw mtr tshark ipcalc
 #python stuff for system
-sudo pip install -yy tldr
-sudo pip install -yy bpytop
-sudo pip install -yy glances
-sudo pip install -yy uv
-sudo pip install -yy unp
+sudo pip install tldr
+sudo pip install bpytop
+sudo pip install glances
+sudo pip install uv
+sudo pip install unp
 
 #shells
 sudo dnf install -yy fish
@@ -117,15 +117,15 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.z
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/AdwaitaMono.zip
 mkdir nerd-fonts-vf
-mv *.zip nerf-fonts-vf
+mv *.zip nerf-fonts-vf/
 cd nerd-fonts-vf
-unzip -o Ubuntu.zip
-unzip -o UbuntuMono.zip
-unzip -o JetBrainsMono.zip
-unzip -o FiraMono.zip
-unzip -o FiraCode.zip
-unzip -o AdwaitaMono.zip
-unzip -o NerdFontsSymbolsOnly.zip
+unzip Ubuntu.zip
+unzip UbuntuMono.zip
+unzip JetBrainsMono.zip
+unzip FiraMono.zip
+unzip FiraCode.zip
+unzip AdwaitaMono.zip
+unzip NerdFontsSymbolsOnly.zip
 cd ..
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.local/share/fontconfig/conf.avail
