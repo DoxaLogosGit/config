@@ -52,7 +52,6 @@ set clipboard=unnamedplus
 "colorscheme oxocarbon
 "colorscheme jaydark
 colorscheme moonfly
-let g:moonflyTransparent = v:true
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 set viminfo='50,<50,s50,h,rA:,rB:,!
@@ -75,6 +74,9 @@ set tpm=10
 set nohls
 let b:loadcount=0
 autocmd FileType odin set shiftwidth=4
+
+let g:moonflyTransparent = v:true
+let g:moonflyItalics = v:true
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -25,7 +25,7 @@ sudo dnf install -yy ImageMagick
 sudo dnf install -yy glow
 sudo dnf install -yy poppler
 sudo dnf install -yy ffmpeg
-sudo dnf install -yy jq
+sudo dnf install -yy jq yq
 sudo dnf install -yy moreutils
 sudo dnf install -yy asciinema
 sudo dnf copr enable -y atim/lazydocker
