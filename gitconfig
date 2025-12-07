@@ -5,3 +5,5 @@
 	default = simple
 [core]
 	autocrlf = false
+[init]
+	defaultBranch = main

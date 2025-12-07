@@ -2,9 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 starship init fish | source
-set -gx PATH $PATH ~/projects/Odin ~/.local/bin ~/projects/ols  ~/.cargo/bin
+set -gx NVM_DIR  ~/.nvm
+set -gx PATH $PATH ~/projects/Odin ~/.local/bin ~/.local/bin/yubico-authenticator ~/projects/ols  ~/.cargo/bin ~/.nvm /opt/IDriveForLinux/bin
 set -gx ODIN_ROOT  ~/projects/Odin
-set -gx EDTIOR nvim
+set -gx EDITOR nvim
 alias ll "eza --icons --color=always --color-scale=all -l --git"
 
 set name_list $(string split "-" $(uname -r))
@@ -21,3 +22,8 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/jgatkinsn/.lmstudio/bin
+# End of LM Studio CLI section
+
