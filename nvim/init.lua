@@ -111,6 +111,20 @@ require("lazy").setup({
   -- Utilities
   { 'nvim-lua/plenary.nvim' },
 
+  -- Claude Code integration
+  { 'greggh/claude-code.nvim',
+    config = function()
+      require('claude-code').setup({
+        keymaps = {
+          toggle = {
+            normal = '<leader>cc',
+            terminal = '<leader>cc',
+          }
+        }
+      })
+    end
+  },
+
   -- Colorschemes
   { 'bluz71/vim-moonfly-colors',
     name = 'moonfly',
@@ -147,6 +161,10 @@ require("lazy").setup({
   -- Uncomment when needed:
   -- { 'epwalsh/obsidian.nvim' },
 })
+
+-- Leader key
+vim.g.mapleader = '\\'
+vim.g.maplocalleader = '\\'
 
 -- Vim settings
 vim.opt.termguicolors = true
