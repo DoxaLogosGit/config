@@ -12,6 +12,8 @@ set name_list $(string split "-" $(uname -r))
 
 if string match -qi -- "WSL2" $name_list
     set -gx TERM xterm-256color
+else
+    set -gx TERM xterm-256color
 end
 
 function y
@@ -27,3 +29,7 @@ end
 set -gx PATH $PATH /home/jgatkinsn/.lmstudio/bin
 # End of LM Studio CLI section
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
