@@ -39,6 +39,38 @@ pip install jedi_language_server
 pip install flake8
 pip install vale
 
+#install node.js using nvm
+echo "installing node.js via nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install --lts
+nvm use --lts
+
+#install bun
+echo "installing bun"
+curl -fsSL https://bun.sh/install | bash
+
+#install claude cli
+echo "installing claude cli"
+npm install -g @anthropic-ai/claude-code
+
+#install gemini cli
+echo "installing gemini cli"
+npm install -g @google/generative-ai
+
+#install codex
+echo "installing codex"
+npm install -g @openai/codex
+
+#install get shit done
+echo "installing get-shit-done"
+npm install -g get-shit-done
+
+#install opencode
+echo "installing opencode"
+npm install -g opencode-ai@latest
+
 #install yazi
 wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip
 unzip yazi-x86_64-unknown-linux-gnu.zip
