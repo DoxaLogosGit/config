@@ -71,6 +71,11 @@ npm install -g get-shit-done
 echo "installing opencode"
 npm install -g opencode-ai@latest
 
+#install playwright
+echo "installing playwright"
+npm install -g playwright
+npx playwright install --with-deps
+
 #install yazi
 wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip
 unzip yazi-x86_64-unknown-linux-gnu.zip

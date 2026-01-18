@@ -107,6 +107,11 @@ npm install -g get-shit-done
 echo "installing opencode"
 npm install -g opencode-ai@latest
 
+#install playwright
+echo "installing playwright"
+npm install -g playwright
+npx playwright install --with-deps
+
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
 mkdir -p $HOME/.config/fish
