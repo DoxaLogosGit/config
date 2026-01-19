@@ -76,6 +76,10 @@ echo "installing playwright"
 npm install -g playwright
 npx playwright install --with-deps
 
+#install playwright mcp for claude
+echo "installing playwright mcp server for claude"
+npm install -g @playwright/mcp
+
 #install yazi
 wget https://github.com/sxyazi/yazi/releases/download/v25.4.8/yazi-x86_64-unknown-linux-gnu.zip
 unzip yazi-x86_64-unknown-linux-gnu.zip

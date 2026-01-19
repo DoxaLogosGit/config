@@ -112,6 +112,10 @@ echo "installing playwright"
 npm install -g playwright
 npx playwright install --with-deps
 
+#install playwright mcp for claude
+echo "installing playwright mcp server for claude"
+npm install -g @playwright/mcp
+
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
 mkdir -p $HOME/.config/fish
