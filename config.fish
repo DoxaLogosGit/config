@@ -6,6 +6,7 @@ set -gx NVM_DIR  ~/.nvm
 set -gx PATH $PATH ~/projects/Odin ~/.local/bin ~/.local/bin/yubico-authenticator ~/projects/ols  ~/.cargo/bin ~/.nvm /opt/IDriveForLinux/bin
 set -gx ODIN_ROOT  ~/projects/Odin
 set -gx EDITOR nvim
+set -gx ENABLE_TOOL_SEARCH true
 alias ll "eza --icons --color=always --color-scale=all -l --git"
 alias c "claude"
 
