@@ -92,6 +92,9 @@ unzip eza_x86_64-unknown-linux-gnu.zip
 sudo mv eza /usr/bin/
 rm -rf eza*
 
+#install mise
+curl https://mise.run | sh
+
 mkdir -p $HOME/.vim-tmp
 mkdir -p $HOME/.tmp
 mkdir -p $HOME/.config/fish
