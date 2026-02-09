@@ -9,6 +9,7 @@ set -gx EDITOR nvim
 set -gx ENABLE_TOOL_SEARCH true
 alias ll "eza --icons --color=always --color-scale=all -l --git"
 alias c "claude"
+alias ac "/bin/bash claude_aws.sh"
 
 set name_list $(string split "-" $(uname -r))
 
@@ -35,3 +36,5 @@ set -gx PATH $PATH /home/jgatkinsn/.lmstudio/bin
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+mise activate fish | source

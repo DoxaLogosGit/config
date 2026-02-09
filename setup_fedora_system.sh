@@ -67,6 +67,9 @@ unzip eza_x86_64-unknown-linux-gnu.zip
 sudo mv eza /usr/bin/
 rm -rf eza*
 
+#install mise
+curl https://mise.run | sh
+
 echo "install rust-analyzer and other utilities for lsp's"
 mkdir -p ~/.local/bin
 curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
